@@ -19,7 +19,7 @@ namespace CodeCoverageWorkshop.Logic
 
         public void Validate(string login, string password)
         {
-            var validationMessages = new List<string>();
+            var validationMessages = new List<string>(); // unused code - intentionally here
 
             if (_userService.UserExists(login))
                 throw new ValidationException("Podany login jest już zajęty");
@@ -29,7 +29,7 @@ namespace CodeCoverageWorkshop.Logic
             var forbiddenLogins = _glossaryService.GetElements(GlossaryConsts.ForbiddenLogins);
 
             if (forbiddenLogins.Any(x => string.Equals(x, login, StringComparison.InvariantCultureIgnoreCase)))
-                throw new ValidationException("Login nie może zawierać słowa uważanego za obraźliwe");
+                throw new ValidationException("Login nie może zawierać słowa uważanego za niecenzuralne");
         }
     }
 
