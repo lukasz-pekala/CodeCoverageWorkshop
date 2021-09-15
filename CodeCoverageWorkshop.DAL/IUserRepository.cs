@@ -7,7 +7,7 @@ namespace CodeCoverageWorkshop.DAL.Services
 {
     public class UserRepository : IUserRepository
     {
-        private IList<User> Users { get; set; }
+        private IList<User> Users { get; set; } = new List<User>();
 
 
         public void Add(User newUser)
