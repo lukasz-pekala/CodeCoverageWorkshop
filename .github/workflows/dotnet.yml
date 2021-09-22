@@ -47,7 +47,7 @@ jobs:
             /o:"lukasz-pekala" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
-            /d:sonar.cs.vstest.reportsPaths="**/TestResults/*/*.trx `
+            /d:sonar.cs.vstest.reportsPaths="**/TestResults/*/*.trx" `
             /d:sonar.cs.opencover.reportsPaths="**/CoverageData/*/coverage.opencover.xml" `
             /d:sonar.coverage.exclusions="**/*.conf.js,**/*.spec.ts,**/*.html,**/wwwroot/**/*,**/obj/**,**/bin/**,**/.git/**,**/package.json,**/angular.json,**/appsettings*json,**/node_modules/**,**/Upgrades/Migrations/**"
           dotnet restore
