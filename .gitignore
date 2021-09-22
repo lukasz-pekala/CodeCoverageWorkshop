@@ -390,3 +390,4 @@ FodyWeavers.xsd
 /tools/reportgenerator.exe
 /CoverageReports/
 /tools/.store/dotnet-reportgenerator-globaltool/
+lcov.info
