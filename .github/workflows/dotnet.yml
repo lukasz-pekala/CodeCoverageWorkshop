@@ -60,7 +60,8 @@ jobs:
         with:
           name: CoverageReport # Artifact name        
           path: ${{ github.workspace }}
-          
+
+# TODO: Seems that coveralls.io needs one file path-to-lcov: ./MyLibrary.Tests/TestResults/coverage.info so the results we have should be combined into one
   finish:
     needs: build
     runs-on: windows-latest
