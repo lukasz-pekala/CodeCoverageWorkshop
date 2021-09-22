@@ -20,7 +20,6 @@ dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /
   /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
   /d:sonar.host.url="https://sonarcloud.io" `
   /d:sonar.cs.nunit.reportsPaths="**/TestResults/*/*.trx" `
-  
   /d:sonar.cs.opencover.reportsPaths="CodeCoverageWorkshop.Logic.xUnit.Test/CoverageData/coverage.opencover.xml,CodeCoverageWorkshop.Logic.NUnit.Test/CoverageData/coverage.opencover.xml" `   /d:sonar.coverage.exclusions="**/*.conf.js,**/*.spec.ts,**/*.html,**/wwwroot/**/*,**/obj/**,**/bin/**,**/.git/**,**/package.json,**/angular.json,**/appsettings*json,**/node_modules/**,**/Upgrades/Migrations/**"
   
 dotnet restore
