@@ -54,4 +54,8 @@ jobs:
           dotnet build --no-restore
           dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=$GITHUB_WORKSPACE\CoverageData\ /p:CoverletOutputFormat=opencover
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" 
-
+      - name: Store Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: CodeCoverageArtifacts
+          path: $GITHUB_WORKSPACE/CodeCoverageWorkshop.Logic.xUnit.Test/CoverageData
