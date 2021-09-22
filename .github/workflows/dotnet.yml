@@ -48,8 +48,7 @@ jobs:
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
             /d:sonar.cs.nunit.reportsPaths="**/TestResults/*/*.trx" `
-            # TODO: This is naive way of specifying paths to coverage.opencover.xml -  Change it to sth like: /d:sonar.cs.opencover.reportsPaths="**/CoverageData/*/coverage.opencover.xml" `
-            /d:sonar.cs.opencover.reportsPaths="CodeCoverageWorkshop.Logic.xUnit.Test/CoverageData/coverage.opencover.xml,CodeCoverageWorkshop.Logic.NUnit.Test/CoverageData/coverage.opencover.xml" `
+            /d:sonar.cs.opencover.reportsPaths="CodeCoverageWorkshop.Logic.xUnit.Test/CoverageData/coverage.opencover.xml,CodeCoverageWorkshop.Logic.NUnit.Test/CoverageData/coverage.opencover.xml" ` # TODO: This is naive way of specifying paths to coverage.opencover.xml -  Change it to sth like: /d:sonar.cs.opencover.reportsPaths="**/CoverageData/*/coverage.opencover.xml" `
             /d:sonar.coverage.exclusions="**/*.conf.js,**/*.spec.ts,**/*.html,**/wwwroot/**/*,**/obj/**,**/bin/**,**/.git/**,**/package.json,**/angular.json,**/appsettings*json,**/node_modules/**,**/Upgrades/Migrations/**"
           dotnet restore
           dotnet build --no-restore
