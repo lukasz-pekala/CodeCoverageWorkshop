@@ -1,0 +1,62 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CodeCoverageWorkshop.DAL -> C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.DAL\bin\Debug\net5.0\CodeCoverageWorkshop.DAL.dll
+  CodeCoverageWorkshop.Logic -> C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic\bin\Debug\net5.0\CodeCoverageWorkshop.Logic.dll
+  CodeCoverageWorkshop.Logic.NUnit.Test -> C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.NUnit.Test\bin\Debug\net5.0\CodeCoverageWorkshop.Logic.NUnit.Test.dll
+  CodeCoverageWorkshop.Logic.xUnit.Test -> C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.xUnit.Test\bin\Debug\net5.0\CodeCoverageWorkshop.Logic.xUnit.Test.dll
+Test run for C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.NUnit.Test\bin\Debug\net5.0\CodeCoverageWorkshop.Logic.NUnit.Test.dll (.NETCoreApp,Version=v5.0)
+Test run for C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.xUnit.Test\bin\Debug\net5.0\CodeCoverageWorkshop.Logic.xUnit.Test.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.11.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Microsoft (R) Test Execution Command Line Tool Version 16.11.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 81 ms - CodeCoverageWorkshop.Logic.NUnit.Test.dll (net5.0)
+
+Calculating coverage result...
+  Generating report 'C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.NUnit.Test\coverage.json'
+
++----------------------------+--------+--------+--------+
+| Module                     | Line   | Branch | Method |
++----------------------------+--------+--------+--------+
+| CodeCoverageWorkshop.DAL   | 0%     | 100%   | 0%     |
++----------------------------+--------+--------+--------+
+| CodeCoverageWorkshop.Logic | 36,36% | 37,5%  | 33,33% |
++----------------------------+--------+--------+--------+
+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 23,07% | 37,5%  | 9,52%  |
++---------+--------+--------+--------+
+| Average | 18,18% | 68,75% | 16,66% |
++---------+--------+--------+--------+
+
+
+Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 2 ms - CodeCoverageWorkshop.Logic.xUnit.Test.dll (net5.0)
+
+Calculating coverage result...
+  Generating report 'C:\dev\CodeCoverageWorkshop\CodeCoverageWorkshop.Logic.xUnit.Test\coverage.json'
+
++----------------------------+--------+--------+--------+
+| Module                     | Line   | Branch | Method |
++----------------------------+--------+--------+--------+
+| CodeCoverageWorkshop.DAL   | 0%     | 100%   | 0%     |
++----------------------------+--------+--------+--------+
+| CodeCoverageWorkshop.Logic | 39,39% | 50%    | 33,33% |
++----------------------------+--------+--------+--------+
+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 25%    | 50%    | 9,52%  |
++---------+--------+--------+--------+
+| Average | 19,69% | 75%    | 16,66% |
++---------+--------+--------+--------+
+
