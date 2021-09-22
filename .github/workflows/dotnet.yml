@@ -60,3 +60,12 @@ jobs:
         with:
           name: CoverageReport # Artifact name        
           path: ${{ github.workspace }}
+          
+  finish:
+    needs: build
+    runs-on: windows-latest
+    steps:
+    - name: Coveralls Finished
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.coveralls_token }}
