@@ -55,6 +55,7 @@ jobs:
           dotnet build --no-restore
           dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" 
+# TODO: Needs to be worked on
       - name: Upload coverage report artifact
         uses: actions/upload-artifact@v2
         with:
