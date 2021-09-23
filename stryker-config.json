@@ -5,24 +5,14 @@
             "progress",
             "html"
         ],
+		"log-level": "debug",
+        "log-file":true,
         "timeout-ms": 10000,
         "solution-path": "CodeCoverageWorkshop.sln",
         "max-concurrent-test-runners": 4,
         "threshold-high": 80,
         "threshold-low": 70,
         "threshold-break": 60,
-        "mutation-level": "Standard",
-        "mutate": [
-            "!Migrations/*.*",
-        ],
-        "excluded-mutations": [
-            "string",
-            "Logical operators"
-        ],
-        "ignore-methods": [
-            "*Log*",
-            "ToString",
-            "*HashCode*"
-        ]
+        "mutation-level": "Complete",
     }
 }
