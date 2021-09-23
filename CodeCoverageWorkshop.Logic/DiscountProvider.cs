@@ -1,9 +1,12 @@
 ﻿using CodeCoverageWorkshop.DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CodeCoverageWorkshop.Logic
 {
+    // WARN: This is excluded from code coverage !!!
+    [ExcludeFromCodeCoverage]
     public class DiscountProvider : IDiscountProvider
     {
         public double CalculateDiscount(User user, IList<Product> products, string promoCode)
