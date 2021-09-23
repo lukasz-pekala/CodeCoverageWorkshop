@@ -3,10 +3,11 @@
     {
         "reporters": [
             "progress",
-            "html"
+            "html",
+            "cleartextTree"
         ],
 		"log-level": "debug",
-        "log-file":true,
+        "log-file": true,
         "timeout-ms": 10000,
         "solution-path": "CodeCoverageWorkshop.sln",
         "max-concurrent-test-runners": 4,

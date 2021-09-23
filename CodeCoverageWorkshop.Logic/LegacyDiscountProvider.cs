@@ -7,7 +7,7 @@ namespace CodeCoverageWorkshop.Logic
 {
     // WARN: This is excluded from code coverage !!!
     [ExcludeFromCodeCoverage]
-    public class DiscountProvider : IDiscountProvider
+    public class LegacyDiscountProvider : IDiscountProvider
     {
         public double CalculateDiscount(User user, IList<Product> products, string promoCode)
         {
