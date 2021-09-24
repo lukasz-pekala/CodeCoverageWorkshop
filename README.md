@@ -6,14 +6,14 @@ A project created to test different possibilities of code coverage generation en
 
 ## dotnet test example
 
-```
+```powershell
 dotnet restore
 dotnet build --no-restore
 dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
 ```
 
 ## Essential part of SonarCloud (SonarQube) configuration
-```
+```powershell
 .\.sonar\scanner\dotnet-sonarscanner begin `
   /k:"lukasz-pekala_CodeCoverageWorkshop" `
   /o:"lukasz-pekala" `
@@ -31,7 +31,7 @@ dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /
 
 ## dotCover example
 
-```
+```powershell
 dotnet dotcover test --no-build --dcReportType=Html
 ```
 
