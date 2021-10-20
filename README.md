@@ -111,7 +111,7 @@ https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Comma
 
 ## dotCover example
 ```powershell
-dotnet tool install JetBrains.dotCover.GlobalTool -g![image](https://user-images.githubusercontent.com/25744590/138159816-1aadb435-749b-44a4-b47c-abd23545c143.png)
+dotnet tool install JetBrains.dotCover.GlobalTool -g
 ```
 
 ```powershell
