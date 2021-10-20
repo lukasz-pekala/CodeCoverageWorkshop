@@ -41,9 +41,24 @@ https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Comma
 ## coverlet examples
 ```powershell
 dotnet test /p:CollectCoverage=true
-
+```
+```powershell
 dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=\"line,branch,method\"
 ```
+
+[assembly: ExcludeFromCodeCoverage]
+
+.NET 5:
+```C#
+[AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=net-5.0
+
+.NET 4.X
+```C#
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Event | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
 
 ## ReportGenerator - instalacja
 
