@@ -43,21 +43,11 @@ dotnet test /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:Coverle
 dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=\"line,branch,method\"
 ```
 
-[assembly: ExcludeFromCodeCoverage]
+## coverlet - więcej informacji
+https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
 
-.NET 5:
-```C#
-[AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
-```
-https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=net-5.0
 
-.NET 4.X
-```C#
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Event | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-```
-https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
-
-## ReportGenerator - instalacja
+# ReportGenerator - instalacja
 
 Dla .NET Core/.NET 5 zainstalujmy ReportGenerator globalnie. 
 
@@ -91,7 +81,6 @@ tworząc plik .config\dotnet-tools.json
 }
 ```
 
-
 ## ReportGenerator - wygenerowanie raportu
 Niestety ReportGenerator nie potrafi przetworzyć danych wygenerowanych przez Coverlet w domyślnym formacie (pliki coverage.json)
 Zmieńmy więc sposób generowania danych o Coverleta tak by otrzymać wyniki w formacie OpenCover
@@ -106,8 +95,20 @@ Wygenerujmy raport w oparciu o dostępne dane
 reportgenerator -reports:".\CodeCoverageWorkshop.Logic.xUnit.Test\CoverageData\coverage.opencover.xml;.\CodeCoverageWorkshop.Logic.NUnit.Test\CoverageData\coverage.opencover.xml" -targetdir:.\CoverageReports -reporttypes:"Html;HtmlSummary;MarkdownSummary;TeamCitySummary"
 ```
 
-## Coverlet - więcej informacji
-https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
+# Code Coverage Exclusions
+[assembly: ExcludeFromCodeCoverage]
+
+.NET 5:
+```C#
+[AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=net-5.0
+
+.NET 4.X
+```C#
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Event | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
 
 # dotCover
 ## dotCover - How to configure
