@@ -93,3 +93,6 @@ Wygenerujmy raport w oparciu o dostępne dane
 ```powershell
 reportgenerator -reports:".\CodeCoverageWorkshop.Logic.xUnit.Test\CoverageData\coverage.opencover.xml;.\CodeCoverageWorkshop.Logic.NUnit.Test\CoverageData\coverage.opencover.xml" -targetdir:.\CoverageReports -reporttypes:"Html;HtmlSummary;MarkdownSummary;TeamCitySummary"
 ```
+
+## Coverlet - więcej informacji
+https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
