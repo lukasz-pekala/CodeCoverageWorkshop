@@ -29,14 +29,7 @@ dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /
 .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" 
 ```
 
-## dotCover example
-
-```powershell
-dotnet dotcover test --no-build --dcReportType=Html
-```
-
-## dotCover - How to configure
-https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html
+# dotnet test and coverlet
 
 ## coverlet examples
 ```powershell
@@ -111,3 +104,16 @@ reportgenerator -reports:".\CodeCoverageWorkshop.Logic.xUnit.Test\CoverageData\c
 
 ## Coverlet - więcej informacji
 https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
+
+# dotCover
+## dotCover - How to configure
+https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html
+
+## dotCover example
+```powershell
+dotnet tool install JetBrains.dotCover.GlobalTool -g![image](https://user-images.githubusercontent.com/25744590/138159816-1aadb435-749b-44a4-b47c-abd23545c143.png)
+```
+
+```powershell
+dotnet dotcover test --no-build --dcReportType=Html
+```
