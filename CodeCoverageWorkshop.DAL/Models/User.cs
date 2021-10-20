@@ -13,12 +13,5 @@ namespace CodeCoverageWorkshop.DAL.Models
 
         public DateTime DateOfBirth { get; set; }
         public DateTime AccountActivationDate { get; set; }
-
-        // WARN: Never use plain passwords in production! This is only for simplification
-        public string Password { get; set; }
-
-        //public List<Role> Roles { get; set; }
-
-        //public List<UserAction> Actions { get; set; }
     }
 }

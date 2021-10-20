@@ -1,9 +1,9 @@
-﻿using CodeCoverageWorkshop.DAL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CodeCoverageWorkshop.DAL.Models;
 
-namespace CodeCoverageWorkshop.DAL.Services
+namespace CodeCoverageWorkshop.DAL
 {
     public class UserRepository : IUserRepository
     {

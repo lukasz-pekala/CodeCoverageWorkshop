@@ -1,4 +1,4 @@
-﻿using CodeCoverageWorkshop.DAL.Services;
+﻿using CodeCoverageWorkshop.DAL;
 
 namespace CodeCoverageWorkshop.Logic.Services
 {
