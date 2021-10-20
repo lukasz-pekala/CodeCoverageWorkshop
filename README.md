@@ -37,3 +37,44 @@ dotnet dotcover test --no-build --dcReportType=Html
 
 ## dotCover - How to configure
 https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html
+
+## coverlet examples
+```powershell
+dotnet test /p:CollectCoverage=true
+
+dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=\"line,branch,method\"
+```
+
+## ReportGenerator - instalacja
+
+Dla .NET Core/.NET 5 zainstalujmy ReportGenerator globalnie. 
+
+```powershell
+dotnet tool install -g dotnet-reportgenerator-globaltool
+```
+
+lub lokalnie:
+
+```powershell
+dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools
+
+dotnet new tool-manifest
+dotnet tool install dotnet-reportgenerator-globaltool
+```
+
+tworząc plik .config\dotnet-tools.json
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-reportgenerator-globaltool": {
+      "version": "4.8.12",
+      "commands": [
+        "reportgenerator"
+      ]
+    }
+  }
+}
+```
