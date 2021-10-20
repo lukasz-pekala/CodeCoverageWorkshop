@@ -4,13 +4,6 @@ A project created to test different possibilities of code coverage generation en
 [![Build](https://github.com/lukasz-pekala/CodeCoverageWorkshop/actions/workflows/dotnet.yml/badge.svg)](https://github.com/lukasz-pekala/CodeCoverageWorkshop/actions/workflows/dotnet.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lukasz-pekala_CodeCoverageWorkshop&metric=alert_status)](https://sonarcloud.io/dashboard?id=lukasz-pekala_CodeCoverageWorkshop)
 
-## dotnet test example
-
-```powershell
-dotnet restore
-dotnet build --no-restore
-dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
-```
 
 ## Essential part of SonarCloud (SonarQube) configuration
 ```powershell
@@ -31,9 +24,20 @@ dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /
 
 # dotnet test and coverlet
 
+## dotnet test example
+
+```powershell
+dotnet restore
+dotnet build --no-restore
+dotnet test --no-build --verbosity normal --logger trx /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
+```
+
 ## coverlet examples
 ```powershell
 dotnet test /p:CollectCoverage=true
+```
+```powershell
+dotnet test /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
 ```
 ```powershell
 dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=\"line,branch,method\"
