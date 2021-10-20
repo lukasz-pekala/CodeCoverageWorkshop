@@ -47,7 +47,8 @@ dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=
 https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
 
 
-# ReportGenerator - instalacja
+# ReportGenerator
+## ReportGenerator - instalacja
 
 Dla .NET Core/.NET 5 zainstalujmy ReportGenerator globalnie. 
 
