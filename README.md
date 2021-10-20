@@ -123,3 +123,16 @@ dotnet tool install JetBrains.dotCover.GlobalTool -g
 ```powershell
 dotnet dotcover test --no-build --dcReportType=Html
 ```
+
+# Front-end Code Coverage
+
+## Angular
+Poniższe polecenie generuje plik lcov.info w podkatalogu coverage\<nazwa aplikacji angular>\
+
+```powershell
+ng test --browsers=ChromeHeadless --code-coverage --watch false
+```
+Raport wygenerowany przez Istanbul może zostać skonsumowany przez Gitlaba
+
+## Cypress & React
+https://docs.cypress.io/guides/tooling/code-coverage#Introduction
