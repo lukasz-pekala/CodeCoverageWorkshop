@@ -78,3 +78,18 @@ tworząc plik .config\dotnet-tools.json
   }
 }
 ```
+
+
+## ReportGenerator - wygenerowanie raportu
+Niestety ReportGenerator nie potrafi przetworzyć danych wygenerowanych przez Coverlet w domyślnym formacie (pliki coverage.json)
+Zmieńmy więc sposób generowania danych o Coverleta tak by otrzymać wyniki w formacie OpenCover
+
+```powershell
+dotnet test /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover
+```
+
+Wygenerujmy raport w oparciu o dostępne dane
+
+```powershell
+reportgenerator -reports:".\CodeCoverageWorkshop.Logic.xUnit.Test\CoverageData\coverage.opencover.xml;.\CodeCoverageWorkshop.Logic.NUnit.Test\CoverageData\coverage.opencover.xml" -targetdir:.\CoverageReports -reporttypes:"Html;HtmlSummary;MarkdownSummary;TeamCitySummary"
+```
