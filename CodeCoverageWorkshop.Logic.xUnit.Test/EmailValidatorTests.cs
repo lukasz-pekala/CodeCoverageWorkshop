@@ -48,7 +48,7 @@ namespace CodeCoverageWorkshop.Logic.xUnit.Test
         [InlineData("email@example.name")]
         [InlineData("firstname-lastname@example.com")]
         [InlineData("ivan.sergeev@example.ru")]
-        // [InlineData("иван.сергеев@пример.рф")] // https://en.wikipedia.org/wiki/International_email
+        //[InlineData("иван.сергеев@пример.рф")] // https://en.wikipedia.org/wiki/International_email
         public void Validate_ShouldPass_WhenEmailIsValid(string email)
         {
             // Arrange
