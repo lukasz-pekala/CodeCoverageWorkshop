@@ -72,6 +72,20 @@ https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excl
 ## More
 https://www.axian.com/2021/04/30/simple-powershell-script-for-producing-code-coverage-reports-in-net-core/
 
+# Visual Studio Code configuration
+## .NET Core Test Explorer
+
+Let's add:
+
+```powershell
+/p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./lcov.info
+```
+
+to:
+
+![image](https://user-images.githubusercontent.com/25744590/138275011-bb2d06b5-ee47-4ad2-acfc-2f39f529f6c8.png)
+
+
 # ReportGenerator
 ## ReportGenerator - instalacja
 
