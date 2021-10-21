@@ -19,7 +19,7 @@ namespace CodeCoverageWorkshop.Logic
 
         public void Validate(string login, string password)
         {
-            var validationMessages = new List<string>(); // unused code - intentionally here
+            var validationMessages = new List<string>(); // #100%CoverageMyth: unused code - intentionally here
 
             if (_userService.UserExists(login))
                 throw new ValidationException("Podany login jest już zajęty");

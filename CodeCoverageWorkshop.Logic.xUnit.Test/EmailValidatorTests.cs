@@ -36,7 +36,7 @@ namespace CodeCoverageWorkshop.Logic.xUnit.Test
             Assert.Contains("Adres e-mail jest niepoprawny.", result.ErrorMessages);
         }
 
-        // Try comment out all InlineData attributes below leaving only one and you'll still get 100% code coverage for EmailValidator
+        // #100%CoverageMyth: Try comment out all InlineData attributes below leaving only one and you'll still get 100% code coverage for EmailValidator
         [Theory]
         [InlineData("email@example.com")]
         [InlineData("firstname.lastname@example.com")]
@@ -48,7 +48,7 @@ namespace CodeCoverageWorkshop.Logic.xUnit.Test
         [InlineData("email@example.name")]
         [InlineData("firstname-lastname@example.com")]
         [InlineData("ivan.sergeev@example.ru")]
-        //[InlineData("иван.сергеев@пример.рф")] // https://en.wikipedia.org/wiki/International_email
+        //[InlineData("иван.сергеев@пример.рф")] // https://en.wikipedia.org/wiki/International_email #100%CoverageMyth: Lacking a test case while still having 100% code coverage
         public void Validate_ShouldPass_WhenEmailIsValid(string email)
         {
             // Arrange
@@ -61,7 +61,5 @@ namespace CodeCoverageWorkshop.Logic.xUnit.Test
             Assert.True(result.IsValid);
             Assert.Empty(result.ErrorMessages);
         }
-
-
     }
 }
