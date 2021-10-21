@@ -14,7 +14,7 @@ namespace CodeCoverageWorkshop.Logic
             if (promoCode == "HOLIDAYS10")
                 return sum - sum * 0.10m;
 
-            if (sum >= 100.0m) // #100%CoverageMyth Mutation: a change to "sum >= 100.0m" is not covered
+            if (sum > 100.0m) // #100%CoverageMyth Mutation: a change to "sum >= 100.0m" is not covered
                 return sum - sum * 0.05m;
 
             return sum;
