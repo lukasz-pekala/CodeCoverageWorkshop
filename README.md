@@ -46,6 +46,30 @@ dotnet test /p:CollectCoverage=true /p:Threshold=\"80,100,70\" /p:ThresholdType=
 ## coverlet - więcej informacji
 https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
 
+# Code Coverage Exclusions
+
+# Exclusion of Entity Framework migrations
+```powershell
+dotnet test /p:CollectCoverage=true /p:CoverletOutput=.\CoverageData\ /p:CoverletOutputFormat=opencover /p:Exclude="[*]CodeCoverageWorkshop.DAL.Migrations.*"
+```
+
+# [assembly: ExcludeFromCodeCoverage]
+
+[assembly: ExcludeFromCodeCoverage]
+
+.NET 5:
+```C#
+[AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=net-5.0
+
+.NET 4.X
+```C#
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Event | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
+```
+https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
+
+
 
 # ReportGenerator
 ## ReportGenerator - instalacja
@@ -95,21 +119,6 @@ Wygenerujmy raport w oparciu o dostępne dane
 ```powershell
 reportgenerator -reports:".\CodeCoverageWorkshop.Logic.xUnit.Test\CoverageData\coverage.opencover.xml;.\CodeCoverageWorkshop.Logic.NUnit.Test\CoverageData\coverage.opencover.xml" -targetdir:.\CoverageReports -reporttypes:"Html;HtmlSummary;MarkdownSummary;TeamCitySummary"
 ```
-
-# Code Coverage Exclusions
-[assembly: ExcludeFromCodeCoverage]
-
-.NET 5:
-```C#
-[AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
-```
-https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=net-5.0
-
-.NET 4.X
-```C#
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Event | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-```
-https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
 
 # dotCover
 ## dotCover - How to configure
