@@ -69,7 +69,8 @@ https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excl
 ```
 https://docs.microsoft.com/pl-pl/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netframework-4.8
 
-
+## More
+https://www.axian.com/2021/04/30/simple-powershell-script-for-producing-code-coverage-reports-in-net-core/
 
 # ReportGenerator
 ## ReportGenerator - instalacja
